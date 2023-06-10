@@ -126,12 +126,12 @@
                         <div class="card-body">
                             <input class="form-control" type="text" placeholder="Search ID OR Name"
                                    aria-label="default input example"><br>
-                            <button type="button" class="btn btn-secondary">Search</button>
+                            <button type="button" class="btn btn-secondary" id="searchCustomerTxt">Search</button>
                         </div>
                     </div>
                     <br>
                     <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-danger">Delete</button>
+                        <button type="button" class="btn btn-danger"id="deleteBtn">Delete</button>
                         <button type="button" class="btn" style="background-color: #3CA6A6">Details</button>
                     </div>
                 </div>
@@ -152,31 +152,27 @@
                                                 aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <form>
-                                            <div class="mb-3">
-                                                <label class="form-label">ID</label>
-                                                <input type="text" class="form-control" aria-describedby="emailHelp">
-
+                                        <form class="row g-3" id="myform">
+                                            <div class="col-md-6">
+                                                <label class="form-label">Customer ID</label>
+                                                <input type="text" name="id" class="form-control" id="id" placeholder="C001">
                                             </div>
-                                            <div class="mb-3">
+                                            <div class="col-md-6">
                                                 <label class="form-label">Name</label>
-                                                <input type="text" class="form-control" aria-describedby="emailHelp">
-
+                                                <input type="text" name="name" class="form-control" id="name" placeholder="Danapala">
                                             </div>
-                                            <div class="mb-3">
+                                            <div class="col-12">
                                                 <label class="form-label">Address</label>
-                                                <input type="text" class="form-control" aria-describedby="emailHelp">
-
+                                                <input type="text" name="address" class="form-control" id="address" placeholder="1234 Main St">
                                             </div>
-                                            <div class="mb-3">
-                                                <label for="salaryInput" class="form-label">Salary</label>
-                                                <input type="number" class="form-control" id="salaryInput"
-                                                       aria-describedby="emailHelp">
-
+                                            <div class="col-12">
+                                                <label class="form-label">Contact </label>
+                                                <input type="tel" name="tel" class="form-control" id="tel" placeholder="+94 xxx xxxx">
                                             </div>
-                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                                <button type="button" class="btn btn-success">+Add new Customer</button>
-                                                <button type="button" class="btn btn-warning">Update Customer</button>
+                                            <div class="col-12">
+                                                <button type="button" class="btn btn-primary" id="saveBtn">Save</button>
+                                                <button type="button" class="btn btn-primary bg-info border-info" id="">Update</button>
+
                                             </div>
                                         </form>
                                     </div>
@@ -184,35 +180,24 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="button" class="btn " style="background-color: #FFCF48">All Customer</button>
+                        <button type="button" class="btn " style="background-color: #FFCF48"id="updateBtn">Update</button>
                     </div>
                 </div>
             </div>
             <br>
             <div class="row">
                 <div class="row-12" style="width: 100%">
-                    <table class="table table-bordered" style="border: 2px solid green">
+                    <table class="table table-bordered" style="border: 2px solid green" id="custtable">
                         <thead style="background-color: #08A389">
                         <tr>
                             <th scope="col">ID</th>
                             <th scope="col">Name</th>
                             <th scope="col">Address</th>
-                            <th scope="col">Salary</th>
+                            <th scope="col">Contact</th>
                         </tr>
                         </thead>
-                        <tbody style="background-color: white">
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Chathura</td>
-                            <td>Colombo</td>
-                            <td>50000</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Chathura</td>
-                            <td>Colombo</td>
-                            <td>50000</td>
-                        </tr>
+                        <tbody style="background-color: white" id="cusTblBody">
+
                         </tbody>
                     </table>
                 </div>
@@ -238,7 +223,7 @@
                     </div>
                     <br>
                     <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-danger">Delete</button>
+                        <button type="button" class="btn btn-danger" id="deleteBtn2">Delete</button>
                         <button type="button" class="btn" style="background-color: #3CA6A6">Details</button>
                     </div>
                 </div>
@@ -259,31 +244,27 @@
                                                 aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <form>
-                                            <div class="mb-3">
-                                                <label class="form-label">ID</label>
-                                                <input type="text" class="form-control" aria-describedby="emailHelp">
-
+                                        <form class="row g-3" id="myform2">
+                                            <div class="col-md-6">
+                                                <label class="form-label">Item Code</label>
+                                                <input type="text" class="form-control" id="itemCode" placeholder="R001">
                                             </div>
-                                            <div class="mb-3">
+                                            <div class="col-md-6">
                                                 <label class="form-label">Description</label>
-                                                <input type="text" class="form-control" aria-describedby="emailHelp">
-
+                                                <input type="text" class="form-control" id="des" placeholder="Any">
                                             </div>
-                                            <div class="mb-3">
-                                                <label class="form-label">UnitPrice</label>
-                                                <input type="text" class="form-control" aria-describedby="emailHelp">
-
+                                            <div class="col-6">
+                                                <label class="form-label">Unit Price</label>
+                                                <input type="text" class="form-control" id="unitPrice" placeholder="Rs 125.00">
                                             </div>
-                                            <div class="mb-3">
-                                                <label for="qtyInput" class="form-label">Qty</label>
-                                                <input type="number" class="form-control" id="qtyInput"
-                                                       aria-describedby="emailHelp">
-
+                                            <div class="col-6">
+                                                <label class="form-label">Qty On Hand </label>
+                                                <input type="tel" class="form-control" id="qty1" placeholder="123">
                                             </div>
-                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                                <button type="button" class="btn btn-success">+Add new Item</button>
-                                                <button type="button" class="btn btn-warning">Update Item</button>
+                                            <div class="col-12">
+                                                <button type="button" class="btn btn-primary" id="saveBtn2">Save</button>
+                                                <button type="button" class="btn btn-primary bg-info border-info" id="updateBtn2">Update</button>
+
                                             </div>
                                         </form>
                                     </div>
@@ -297,28 +278,14 @@
             </div>
             <br>
             <div class="row-12" style="width: 100%">
-                <table class="table table-bordered" style="border: 2px solid green">
-                    <thead style="background-color: #08A389">
-                    <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">UnitPrice</th>
-                        <th scope="col">QTY</th>
-                    </tr>
+                <table class="table table-bordered" style="border: 2px solid green" id="itemTBl">
+                    <thead>
+                    <th>Item Code</th>
+                    <th>Description</th>
+                    <th>Unit Price</th>
+                    <th>Qty On Hand</th>
                     </thead>
-                    <tbody style="background-color: white">
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Rice(1.0 kg)</td>
-                        <td>500.00</td>
-                        <td>100</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>lentils(1.0kg)</td>
-                        <td>300.00</td>
-                        <td>50</td>
-                    </tr>
+                    <tbody>
                     </tbody>
                 </table>
             </div>
@@ -339,14 +306,13 @@
                                 <div class="col-6">
                                     <div class="mb-3">
                                         <label class="form-label"> Order ID</label>
-                                        <input type="text" class="form-control" aria-describedby="emailHelp"
-                                               placeholder="O001">
+                                        <label class="form-control" id="order_id">&nbsp;</label>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
                                         <label class="form-label"> Date</label>
-                                        <input type="date" class="form-control" aria-describedby="emailHelp">
+                                        <label class="form-control" id="date"></label>
                                     </div>
                                 </div>
                             </div>
@@ -354,32 +320,29 @@
                                 <div class="col-6">
                                     <div class="mb-3">
                                         <label class="form-label"> Customer ID</label>
-                                        <select id="customerID" class="form-select">
-                                            <option>C001</option>
+                                        <select id="customerCmb" class="form-select">
+                                            <option selected>Choose...</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
                                         <label class="form-label">Name</label>
-                                        <input type="text" class="form-control" aria-describedby="emailHelp"
-                                               placeholder="Nimal">
+                                        <label class="form-control" id="customer_name">&nbsp;</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label class="form-label"> Salary</label>
-                                        <input type="text" class="form-control" aria-describedby="emailHelp"
-                                               placeholder="75000.00">
+                                        <label class="form-label"> Address</label>
+                                        <label class="form-control" id="customer_address">&nbsp;</label>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label class="form-label">Address</label>
-                                        <input type="text" class="form-control" aria-describedby="emailHelp"
-                                               placeholder="Colombo">
+                                        <label class="form-label">Contact</label>
+                                        <label class="form-control" id="customer_contact">&nbsp;</label>
                                     </div>
                                 </div>
                             </div>
@@ -394,16 +357,15 @@
                                 <div class="col-6">
                                     <div class="mb-3">
                                         <label class="form-label"> Item ID</label>
-                                        <select id="itemID" class="form-select">
-                                            <option>I001</option>
+                                        <select id="itemCodeCmb" class="form-select">
+                                            <option selected>Choose...</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
                                         <label class="form-label">Name</label>
-                                        <input type="text" class="form-control" aria-describedby="emailHelp"
-                                               placeholder="Samba 5kg">
+                                        <label class="form-control" id="des2">&nbsp;</label>
                                     </div>
                                 </div>
                             </div>
@@ -411,15 +373,13 @@
                                 <div class="col-6">
                                     <div class="mb-3">
                                         <label class="form-label"> UnitPrice</label>
-                                        <input type="text" class="form-control" aria-describedby="emailHelp"
-                                               placeholder="450.00">
+                                        <label class="form-control" id="unit_price">&nbsp;</label>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
                                         <label class="form-label">QTY On Hand</label>
-                                        <input type="text" class="form-control" aria-describedby="emailHelp"
-                                               placeholder="50">
+                                        <label class="form-control" id="qty_on_hand2">&nbsp;</label>
                                     </div>
                                 </div>
                             </div>
@@ -427,13 +387,12 @@
                                 <div class="col-8">
                                     <div class="mb-3">
                                         <label class="form-label">Order QTY</label>
-                                        <input type="text" class="form-control" aria-describedby="emailHelp"
-                                               placeholder="2">
+                                        <input type="text" class="form-control" id="qty">
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <button type="button" class="btn btn-warning small"
-                                            style="position: absolute;bottom: 2vw;right: 1vw">Add Item
+                                            style="position: absolute;bottom: 2vw;right: 1vw" id="addBtn">Add Item
                                     </button>
                                 </div>
                             </div>
@@ -466,7 +425,7 @@
                             </div>
                             <br>
                             <div class="row-3">
-                                <button type="button" class="btn btn-success">Place Order</button>
+                                <button type="button" class="btn btn-success" id="placeOrderBtn">Place Order</button>
                             </div>
                         </div>
                     </div>
@@ -474,28 +433,18 @@
             </div>
             <br>
             <div class="row-12" style="width: 100%">
-                <table class="table table-bordered" style="border: 2px solid green">
+                <table class="table table-bordered" style="border: 2px solid green" id="ordertbl">
                     <thead style="background-color: #08A389">
                     <tr>
-                        <th scope="col">Item Code</th>
-                        <th scope="col">Item Name</th>
-                        <th scope="col">UnitPrice</th>
-                        <th scope="col">QTY</th>
-                        <th scope="col">Total</th>
-                        <th scope="col">Option</th>
+                        <th>Item Code</th>
+                        <th>Description</th>
+                        <th>Qty On Hand</th>
+                        <th>unit Price</th>
+                        <th>Qty</th>
+                        <th>Total</th>
                     </tr>
                     </thead>
                     <tbody style="background-color: white">
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>samba(1.0 kg)</td>
-                        <td>450.00</td>
-                        <td>2</td>
-                        <td>900.00</td>
-                        <td>
-                            <button type="button" class="btn btn-danger">Delete</button>
-                        </td>
-                    </tr>
 
                     </tbody>
                 </table>
@@ -506,7 +455,14 @@
 
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/jQuery/jquery-3.6.4.min.js"></script>
-
+<script src="models/Customer.js"></script>
+<script src="models/Item.js"></script>
+<script src="models/Order.js"></script>
+<script src="models/Order_Item.js"></script>
+<script type="module" src="controller/CustomerController.js"></script>
+<script src="controller/ItemController.js" type="module"></script>
+<script src="controller/OrderController.js" type="module"></script>
+<script type="module" src="db/DB.js"></script>
 <script>
     $('#btnHome').click(function () {
         $('#homePage').css('display', 'inline-block');
@@ -539,5 +495,6 @@
     });
 
 </script>
+
 </body>
 </html>
